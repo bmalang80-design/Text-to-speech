@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Radio</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.addEventListener('submit', function(e){
+        e.preventDefault();
+        console.log("hello")
+        var checkItems = document.getElementsByName("candidate");           
+        var result = document.getElementById("result");
+        for(i = 0; i < checkItems.length; i++) { 
+                if(checkItems[i].checked) 
+                result.innerText =  checkItems[i].value;
+               
+            } 
+        
+    }, false)
+</script>
+</head>
+<body>
+    <div>
+        <p>Maryland web-voting interface</p>
+    <form id="vote">
+      <fieldset>
+          <legend>Names of candidate</legend>
+          <h4>Select your favorite candidate</Select></h4>
+          <input type="radio" id="Thomas" name="candidate" value="Thomas Jefferson">
+          <label for="Thomas">Thomas Jefferson</label>
+          <br>
+          <input type="radio" id="James" name="candidate" value="James Madison">
+          <label for="James">James Madison</label>
+          <br>
+  
+          <input type="radio" id="Andrew" name="candidate" value="Andrew Jackson">
+          <label for="Andrew">Andrew Jackson</label>
+          <br>
+          <input type="radio" id="Abraham" name="candidate" value="Abraham Lincoln">
+          <label for="Abraham">Abraham Lincoln </label>
+          <br>
+          <input type="submit" value="Save">
+      </fieldset>
+    </form>
+    <p id="result"></p>
+    </div>
+</body>
+</html>

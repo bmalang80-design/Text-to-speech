@@ -1,0 +1,117 @@
+html, body, div,fieldset, form, label, legend{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+       @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+       body{font-size: 16px; font-family: 'Montserrat', sans-serif; background-color: #FF7F50 ; counter-reset: count;}
+       body div{
+           width: 500px;
+           height: 500px;
+           margin: 19px auto;
+           background: #008080;
+
+       }
+      div p{  text-align: center;        
+           color: #fff;
+       }       
+       form#vote{
+           max-width: 4500px; padding: 15;
+           margin: 0 15px;        
+          
+       }
+       form#vote h4{margin: 15px 0px, 3px, 0px; color: #fff; font-size: 1em; }
+       form#vote label{margin: 0 0px, 6px, 0px; color: rgba(255, 255, 255, .8); font-size: 1em; }
+       form#vote fieldset{
+        border: 1px solid rgba(255, 255, 255, .5);
+        margin: 15px 0 15px 0;
+        padding: 0 10px 10px 20px;
+       }  
+       form#vote legend{ color: #253333; font-size: .9em;}  
+       form#vote select{
+           -webkit-appearance: none;
+           -moz-appearance: none;
+           -ms-appearance: none;
+           -o-appearance: none;
+          appearance: none;
+          font-size: .9em;
+          background: #008080 url(image/icons_arrows.svg) no-repeat right 8px;
+          background-size: 30px 20px;
+          color: #ffd34c;
+          padding: 7px 45px 7px 10px;
+          border: 1px solid #fff;
+       }  
+       form#vote input[type=radio]{
+           width: 20px;
+           margin: 0;
+           padding: 0;
+           opacity: 0;           
+       }
+       form#vote input[type=radio] + label{
+           display: inline-block;
+           margin-left: -20px;
+           padding: 4px 0 0 27px;
+           background: url(image/icons_check_radio.svg) no-repeat;
+           background-size: 20px 80px; line-height: 16px;
+       }
+       form#vote input[type=radio] + label{
+           background-position: 0 -40px;
+       }
+       form#vote input:checked + label{
+           color: #ffd34c;           
+       }
+       form#vote input[type=radio]:checked + label{
+           background-position: 0 -60px;
+       }
+       form#vote input[type=submit]{
+           font-size: .9em;
+           color: #fff;
+           border: none;
+           background-color: #084545;
+           margin: 10px 0 5px 0;
+           padding: 10px 25px;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+       form#vote input[type=submit]:hover{
+        color: #ffd34c;   
+       }
+       form#vote ol{
+           width: 400px;
+           padding: 0;
+           padding-bottom: 20px;
+           list-style: none;
+        color: rgba(255, 255, 255, .8);
+        font-size: 1.5em;
+       
+       }
+       form#vote ol li::before{
+        counter-increment: count;
+        content: counter(count) ". ";
+       }
+       form#vote ol li{           
+           border-top: 1.5px solid rgb(1, 37, 37);
+           border-bottom:  1.5px solid rgb(2, 189, 189);;
+       }
+       form#vote ol li:hover{
+           background-color: rgb(48, 99, 99);
+       }
+       form#vote ol li:first-child{
+           border-top: none;
+       }
+       form#vote ol li:last-child{
+           border-bottom: none;
+       }
+       p.old, form.old{
+        font-size: 1.5em;
+       }
+
+
+
+       
+
+           
+      
