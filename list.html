@@ -10,18 +10,19 @@
             e.preventDefault();
             var selectedcItems = document.getElementById("candidate");           
             var result = document.getElementById("result");
-            result.innerText =  selectedcItems.options[selectedcItems.selectedIndex].value;
+            result.innerText = "You have selected " +  selectedcItems.options[selectedcItems.selectedIndex].value;
         }, false)
     </script>
 </head>
 <body>
   <div>
-    <p>Maryland web-voting interface</p>
+    <p><h2>Maryland web-voting interface</h2></p>
     <form id="vote">
       <fieldset>
-        <legend>Names of candidate</legend>
+        <legend>Names of candidates</legend>
         <h4>Choose your favorite candidate</Select></h4>
           <select name="candidate" id="candidate">
+            <option value="" selected>No selection</option>
             <option value="Thomas Jefferson">Thomas Jefferson</option>
             <option value="James Madison">James Madison</option>
             <option value="Andrew Jackson">Andrew Jackson</option>

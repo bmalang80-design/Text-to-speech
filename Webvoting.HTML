@@ -14,7 +14,7 @@
         var result = document.getElementById("result");
         for(i = 0; i < checkItems.length; i++) { 
                 if(checkItems[i].checked) 
-                result.innerText =  checkItems[i].value;
+                result.innerText = "You have selected " + checkItems[i].value;
                
             } 
         
@@ -23,10 +23,10 @@
 </head>
 <body>
     <div>
-        <p>Maryland web-voting interface</p>
+        <p><h2>Maryland web-voting interface</h2></p>
     <form id="vote">
       <fieldset>
-          <legend>Names of candidate</legend>
+          <legend>Names of candidates</legend>
           <h4>Select your favorite candidate</Select></h4>
           <input type="radio" id="Thomas" name="candidate" value="Thomas Jefferson">
           <label for="Thomas">Thomas Jefferson</label>

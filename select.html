@@ -23,30 +23,30 @@
             var code =  e.keyCode; 
             var present =  document.getElementById("result");   
             if(code == 49){
-                present.innerText = "Thomas Jefferson";
+                present.innerText = "You have selected " + "Thomas Jefferson";
             }else if(code == 50){
-                present.innerText = "James Madison";
+                present.innerText ="You have selected " +  "James Madison";
             }else if(code == 51){
-                present.innerText = "Andrew Jackson";
+                present.innerText ="You have selected " +  "Andrew Jackson";
             }else if(code == 52){
-                present.innerText = "Abraham Lincoln";
+                present.innerText ="You have selected " +  "Abraham Lincoln";
             }else{
-                var msg = new SpeechSynthesisUtterance('Invalid selection. You have to select between 1 and 4. Tell me the name of your candidate');
+                var msg = new SpeechSynthesisUtterance('Invalid selection. Please enter in a number between 1 and 4. Say the number, or say the name of the candidate.');
                 window.speechSynthesis.speak(msg);
 
-                recognition.onresult = function(event) {
+            recognition.onresult = function(event) {
             var last = event.results.length - 1;
             var names = event.results[last][0].transcript;
             if(names == 1){
-                present.innerText = "Thomas Jefferson";
+                present.innerText = "You have selected " + "Thomas Jefferson";
             }else if(names == 2){
-                present.innerText = "James Madison";
+                present.innerText ="You have selected " +  "James Madison";
             }else if(names == 3){
-                present.innerText = "Andrew Jackson";
+                present.innerText ="You have selected " +  "Andrew Jackson";
             }else if(names == 4){
-                present.innerText = "Abraham Lincoln";
+                present.innerText = "You have selected " + "Abraham Lincoln";
             }else{
-               present.innerText = names;
+               present.innerText ="You have selected " +  names;
             }
         }
             recognition.onspeechend = function() {
@@ -70,12 +70,13 @@
 </head>
 <body>
     <div>
-        <p class="old">Maryland web-voting interface</p>
+        <p class="old"><h2>Maryland web-voting interface</h2></p>
    <form id="vote" class="old">
     <fieldset>
-        <legend>Names of candidate</legend>
+        <legend>Names of candidates</legend>
         <h4>press a number to pick your favorite candidate</Select></h4>
         <ol>
+           
             <li>Thomas Jefferson </li>
             <li>James Madison</li>
             <li>Andrew Jackson</li>

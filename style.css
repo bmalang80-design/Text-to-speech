@@ -17,7 +17,10 @@ html, body, div,fieldset, form, label, legend{
        }
       div p{  text-align: center;        
            color: #fff;
-       }       
+       } 
+       h2{  text-align: center;        
+        color: #fff;
+    } 
        form#vote{
            max-width: 4500px; padding: 15;
            margin: 0 15px;        
